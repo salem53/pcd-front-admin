@@ -26,6 +26,9 @@ import {ClientNewsfeedComponent} from "./client-newsfeed/client-newsfeed.compone
 import {AdminNewsfeedComponent} from "./admin-newsfeed/admin-newsfeed.component";
 import {AdminAuthguardService} from "./services/admin/admin-authguard.service";
 import {ClientAuthguardService} from "./services/client/client-authguard.service";
+import {StatisticsComponent} from './statistics/statistics.component';
+import {CompletedMissionsComponent} from './completed-missions/completed-missions.component';
+import {HiredMissionsComponent} from './hired-missions/hired-missions.component';
 
 const routes: Routes = [
 
@@ -41,6 +44,9 @@ const routes: Routes = [
   { path: 'signout-freelancer', component: SignoutFreelancerComponent,canActivate: [FreelancerAuthGuardService] },
   { path: 'newsfeed-freelancer', component: FreelancerNewsfeedComponent,canActivate: [FreelancerAuthGuardService] },
   { path: 'freelancers', component: ListFreelancersComponent,canActivate: [AdminAuthguardService] },
+  { path: 'statistics', component: StatisticsComponent,canActivate: [AdminAuthguardService] },
+  { path: 'completed-missions', component: CompletedMissionsComponent,canActivate: [AdminAuthguardService] },
+  { path: 'hired-missions', component: HiredMissionsComponent,canActivate: [AdminAuthguardService] },
   { path: 'signin-client', component: SigninClientComponent },
   { path: 'signup-client', component: SignupClientComponent },
   { path: 'signout-client', component: SignoutClientComponent,canActivate: [ClientAuthguardService] },

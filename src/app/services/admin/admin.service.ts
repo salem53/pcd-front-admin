@@ -12,6 +12,15 @@ export class AdminService {
   listAdmins() {
     return this.Http.get(this.urlAdmins + '/list');
   }
+  getCompletedMissions(){
+    return this.Http.get('http://localhost:8070/Mission/getCompletedMissions');
+  }
+  getHiredMissions(){
+    return this.Http.get('http://localhost:8070/Mission/getHiredMissions');
+  }
+  getStatistics(){
+    return this.Http.get('http://localhost:8070/Mission/getStatistics');
+  }
   createAdmin(myform) {
     this.admin = {
       'firstName': myform.value.adminFirstName,

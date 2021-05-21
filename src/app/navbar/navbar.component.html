@@ -9,12 +9,13 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right" routerLinkActive="active">
         <li class="active" ><a routerLink="/home" >Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li class="dropdown">
+        <li><a routerLink="/freelancers">Manage Accounts </a></li>
+        <li *ngIf="loginServiceAdmin.isUserLoggedIn()" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a routerLink="sidebar-left">Left Sidebar</a></li>
-            <li class="active"><a routerLink="sidebar-right">Right Sidebar</a></li>
+            <li><a routerLink="completed-missions">Completed Missions</a></li>
+            <li><a routerLink="hired-missions">Hired Missions</a></li>
+            <li class="active"><a routerLink="statistics">Numbers & Statistics</a></li>
           </ul>
         </li>
         <li><a routerLink="/contact"><i class="fa fa-address-book"></i>Contact</a></li>

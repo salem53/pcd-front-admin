@@ -1,0 +1,60 @@
+<header id="head" class="secondary"></header>
+<table class="table">
+  <tbody>
+  <tr routerLinkActive="active">
+    <td><button  class="btn btn-default"><a routerLink="/freelancers">Manage Freelancers</a></button></td>
+    <td><button  class="btn btn-default"><a routerLink="/clients">Manage Clients</a></button></td>
+    <td><button  class="btn btn-default"><a routerLink="/admins">Manage Admins</a></button></td>
+  </tr>
+  </tbody>
+</table>
+<ol class="breadcrumb" routerLinkActive="active">
+  <li><a routerLink="/home">Home</a></li>
+  <li class="active">Hired Missions</li>
+</ol>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id Mission</th>
+    <th>Mission Tittle</th>
+    <th>Mission Description</th>
+    <th>Mission Technologies</th>
+    <th>Mission Price</th>
+
+    <th>Client Name</th>
+    <th>Client Email</th>
+    <th>Client Nationality</th>
+    <th>Client Telephone Number</th>
+
+    <th>Freelancer Name</th>
+    <th>Freelancer Email</th>
+    <th>Freelancer Nationality</th>
+    <th>Freelancer Telephone Number</th>
+    <th>Generate Contract</th>
+
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let mission of missions">
+    <td>{{mission.id}}</td>
+    <td>{{mission.title}}</td>
+    <td>{{mission.description}}</td>
+    <td>{{mission.technologies}}</td>
+    <td>{{mission.averagePayment}}$</td>
+    <td>{{mission.client.firstName}} {{mission.client.lastName}}</td>
+    <td>{{mission.client.email}}</td>
+    <td>{{mission.client.nationality}}</td>
+    <td>{{mission.client.telephoneNumber}}</td>
+    <td>{{mission.freelancer.firstName}} {{mission.freelancer.lastName}}</td>
+    <td>{{mission.freelancer.email}}</td>
+    <td>{{mission.freelancer.nationality}}</td>
+    <td>{{mission.freelancer.telephoneNumber}}</td>
+    <td><button (click)="generateContract(mission)" class="btn btn-warning">Generate Contract</button></td>
+
+
+  </tr>
+  </tbody>
+
+
+</table>

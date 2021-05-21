@@ -31,6 +31,9 @@ import { SignoutAdminComponent } from './signout-admin/signout-admin.component';
 import { ClientNewsfeedComponent } from './client-newsfeed/client-newsfeed.component';
 import { AdminNewsfeedComponent } from './admin-newsfeed/admin-newsfeed.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
+import { CompletedMissionsComponent } from './completed-missions/completed-missions.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { HiredMissionsComponent } from './hired-missions/hired-missions.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
     SignoutAdminComponent,
     ClientNewsfeedComponent,
     AdminNewsfeedComponent,
-    CountriesListComponent
+    CountriesListComponent,
+    CompletedMissionsComponent,
+    StatisticsComponent,
+    HiredMissionsComponent
   ],
   imports: [
     BrowserModule,
